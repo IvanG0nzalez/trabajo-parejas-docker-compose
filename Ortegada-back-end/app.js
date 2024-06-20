@@ -1,5 +1,3 @@
-require('./scripts/mantenerServidorActivo');
-
 // Importaciones necesarias
 const express = require('express');
 const path = require('path');
