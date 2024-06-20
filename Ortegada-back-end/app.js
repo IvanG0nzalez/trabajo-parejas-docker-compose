@@ -16,8 +16,6 @@ const apiRouter = require('./routes/api');
 
 const inicializarRoles = require('./scripts/inicializarRoles');
 const inicializarAdmin = require('./scripts/inicializarAdmin');
-const inicializarOrganizadores = require('./scripts/inicializarOrganizadores');
-const inicializarTipos = require('./scripts/inicializarTiposPlatos');
 const models = require('./app/models');
 
 // Se crea la aplicación Express
@@ -42,8 +40,6 @@ models.sequelize.sync().then(() =>{
   console.log('\x1b[33m%s\x1b[0m', "Se sincronizaron los modelos");
   inicializarRoles();
   inicializarAdmin();
-  inicializarOrganizadores();
-  inicializarTipos();
 }).catch(err => {
   console.log(err,"ERROR!");
 });
