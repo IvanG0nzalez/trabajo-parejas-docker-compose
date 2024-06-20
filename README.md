@@ -16,8 +16,10 @@ Nota: Asegurarse de contar con un archivo `.env` con los valores de las variable
 
 1. **Crear un archivo docker-compose.yml**
 
-   Crear un archivo llamado `docker-compose.yml` en la raíz de todo el proyecto y copiar esto:
-    
+  Crear un archivo llamado `docker-compose.yml` en la raíz de todo el proyecto y copiar esto:
+
+  Para ejecutar este archivo es necesario generar los Dockerfile dentro de cada directorio (back-end y front-end) y luego ejecutar `docker-compose up` y una vez completada la construcción entrar al localhost:3001 para ver la aplicación de producción. 
+
    ```yaml  
    version: '3.9'
 
@@ -78,7 +80,9 @@ Nota: Asegurarse de contar con un archivo `.env` con los valores de las variable
 
 1. **Crear un archivo docker-compose-dev.yml**
 
-   Crear un archivo llamado `docker-compose-dev.yml` en la raíz de todo el proyecto y copiar esto:
+  Crear un archivo llamado `docker-compose-dev.yml` en la raíz de todo el proyecto y copiar esto:
+  
+  Para ejecutar este archivo es necesario generar los Dockerfile.dev dentro de cada directorio (front-end y back-end) y luego ejecutar `docker-compose -f docker-compose-dev.yml up` y una vez completada la construcción entrar al localhost:3001 para ver la aplicación de desarrollo.
 
    ```yaml
    version: '3.9'
